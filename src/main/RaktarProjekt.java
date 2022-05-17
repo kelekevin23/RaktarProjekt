@@ -1,4 +1,4 @@
-package raktarprojekt;
+package main;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -7,6 +7,10 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.time.LocalDate;
+import modell.DatumException;
+import modell.Elelmiszer;
+import modell.Konzerv;
+import modell.Raktar;
 
 public class RaktarProjekt {
 
@@ -14,13 +18,13 @@ public class RaktarProjekt {
 
         Raktar r = new Raktar();
 
-        //String date = "2016-08-16";
+        //String date = "2016-08-16";  hibás dátum --> kivétel
         String date = "2022-05-19";
         LocalDate localDate = LocalDate.parse(date);
         r.felvesz(new Konzerv("só", "Kft", "ételhez", localDate));
 
         r.felvesz(new Konzerv("bab", "Gyár", "csípős"));
-      //  r.felvesz(new Konzerv("sütőpor", "Otthon", "ételkészítéshez", "recept.txt"));
+      //r.felvesz(new Konzerv("sütőpor", "Otthon", "ételkészítéshez", "recept.txt"));
 
         kiir(r);
         //System.out.println("\nRendezés név szerint.");
@@ -31,7 +35,7 @@ public class RaktarProjekt {
         kiir(r);
         
         //mentés és betöltés
-      /* mentes(r);
+        /*mentes(r);
         r = null;
         System.out.println(r);
         r = betoltes();

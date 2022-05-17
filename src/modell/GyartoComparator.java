@@ -1,4 +1,4 @@
-package raktarprojekt;
+package modell;
 
 import java.text.Collator;
 import java.util.Comparator;
