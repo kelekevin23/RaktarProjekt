@@ -1,8 +1,9 @@
 package raktarprojekt;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public abstract class Elelmiszer {
+public abstract class Elelmiszer implements Serializable{
 
     private String nev, gyarto;
     private LocalDate lejaratiDatum;

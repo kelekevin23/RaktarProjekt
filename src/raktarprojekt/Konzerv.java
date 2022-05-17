@@ -1,9 +1,10 @@
 package raktarprojekt;
 
 import java.io.File;
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Konzerv extends Elelmiszer {
+public class Konzerv extends Elelmiszer implements Serializable{
 
     private String leiras, receptAjanlas;
 
